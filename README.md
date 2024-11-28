@@ -15,11 +15,18 @@ The LPN is an architecture for inductive program synthesis that builds in test-t
 
 
 ## Installation
-Install JAX using the official documentation [here](https://github.com/jax-ml/jax?tab=readme-ov-file#instructions). Then, install the required packages using the following commands:
+Install JAX using the official documentation [here](https://github.com/jax-ml/jax?tab=readme-ov-file#instructions).
+Then, install the required packages using the following commands:
 ```bash
 git clone https://github.com/clement-bonnet/lpn
 cd lpn
+export PYTHONPATH=${PYTHONPATH}:${PWD}
 pip install -U -r requirements.txt
+```
+Add your secrets to the environment variables (HuggingFace token and WandB API key):
+```bash
+export HF_TOKEN=...
+export WANDB_API_KEY=...
 ```
 
 
@@ -36,7 +43,7 @@ src/
 ## Usage
 To train a model, run the following command (replace the config name with the desired configuration):
 ```bash
-python src/train.py --config-name debug
+python src/train.py --config-name pattern_2d
 ```
 
 
