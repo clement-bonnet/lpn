@@ -172,10 +172,11 @@ def make_leave_one_out(array: chex.Array, axis: int) -> chex.Array:
     Returns:
         Array of shape (*B, N, N-1, *H).
     """
+    axis = axis % array.ndim
     output = []
     for i in range(array.shape[axis]):
         array_before = jax.lax.slice_in_dim(array, 0, i, axis=axis)
         array_after = jax.lax.slice_in_dim(array, i + 1, array.shape[axis], axis=axis)
         output.append(jnp.concatenate([array_before, array_after], axis=axis))
-    output = jnp.stack(output, axis=axis - 1)
+    output = jnp.stack(output, axis=axis)
     return output
