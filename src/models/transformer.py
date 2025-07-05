@@ -301,8 +301,8 @@ class DecoderTransformer(nn.Module):
                         dtype=config.dtype,
                         name="input_pos_col_embed",
                     )(jnp.zeros(config.max_cols, dtype=jnp.uint8))
-                    input_pos_row_embeds = jnp.arange(1, config.max_rows + 1)[:, None] * pos_row_embed
-                    input_pos_col_embeds = jnp.arange(1, config.max_cols + 1)[:, None] * pos_col_embed
+                    input_pos_row_embeds = jnp.arange(1, config.max_rows + 1)[:, None] * input_pos_row_embed
+                    input_pos_col_embeds = jnp.arange(1, config.max_cols + 1)[:, None] * input_pos_col_embed
                     input_pos_embeds = input_pos_row_embeds[:, None] + input_pos_col_embeds[None, :]
                 else:
                     input_pos_row_embed = nn.Embed(
