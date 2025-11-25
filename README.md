@@ -1,11 +1,11 @@
 # Latent Program Network (LPN)
-Code for the paper _Searching Latent Program Spaces_, submitted to the [ARC Prize 2024](https://www.kaggle.com/competitions/arc-prize-2024) competition.
+Code for the paper _Searching Latent Program Spaces_, 3rd paper award at [ARC Prize 2024](https://arcprize.org/competitions/2024/), and published at NeurIPS 2025 (spotlight).
 
 Authors and maintainers: [Clément Bonnet](https://github.com/clement-bonnet) & [Matthew V Macfarlane](https://github.com/mvmacfarlane).
 
 
 ## Links
-- [📄 Paper on arXiv](https://arxiv.org/abs/2411.08706)
+- [📄 arXiv paper](https://arxiv.org/abs/2411.08706)
 - [🚀 Interactive Demo](https://huggingface.co/spaces/clement-bonnet/lpn)
 
 
@@ -54,10 +54,10 @@ This project is licensed under the open-source Apache 2.0 License. See the [LICE
 ## Citation
 If you use this code in your research, please cite:
 ```bibtex
-@misc{bonnet2024searchinglatentprogramspaces,
+@misc{macfarlane2025searchinglatentprogramspaces,
       title={Searching Latent Program Spaces}, 
-      author={Clément Bonnet and Matthew V Macfarlane},
-      year={2024},
+      author={Matthew V Macfarlane and Clement Bonnet},
+      year={2025},
       eprint={2411.08706},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
